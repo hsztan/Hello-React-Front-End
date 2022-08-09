@@ -4,8 +4,14 @@ import axios from 'axios';
 export const fetchGreeting = createAsyncThunk(
   'greeting/fetchGreeting',
   async () => {
-    const { data } = await axios.get('/v1/greeting');
-    return data;
+    try {
+      const { data } = await axios.get('http://localhost:3000/v1/greetings');
+      console.log(data);
+      return data;
+    } catch (error) {
+      console.log('EEEEEEEEEEEEEEEEEEEE');
+      return error;
+    }
   }
 );
 
