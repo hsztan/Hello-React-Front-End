@@ -4,7 +4,7 @@ import axios from 'axios';
 export const fetchGreeting = createAsyncThunk(
   'greeting/fetchGreeting',
   async () => {
-    const { data } = await axios.get('/api/greeting');
+    const { data } = await axios.get('/v1/greeting');
     return data;
   }
 );
@@ -35,4 +35,5 @@ const greetingSlice = createSlice({
   },
 });
 
+export const { actions } = greetingSlice;
 export default greetingSlice.reducer;
