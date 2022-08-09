@@ -1,3 +1,4 @@
+import { flexbox } from '@mui/system';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchGreeting } from './redux/greetingSlice';
@@ -11,8 +12,15 @@ function Greeting() {
     dispatch(fetchGreeting());
   }
   return (
-    <div>
-      <h1>Im greeting: {greeting}</h1>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <h1>Greeting: {greeting}</h1>
       <button type="button" onClick={handleClick}>
         Select a greeting
       </button>
