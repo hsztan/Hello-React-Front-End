@@ -1,11 +1,9 @@
-import { flexbox } from '@mui/system';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchGreeting } from './redux/greetingSlice';
 
 function Greeting() {
   const { greeting } = useSelector((state) => state.greeting.greeting);
-  console.log(greeting);
   const dispatch = useDispatch();
 
   function handleClick() {
@@ -20,7 +18,10 @@ function Greeting() {
         justifyContent: 'center',
       }}
     >
-      <h1>Greeting: {greeting}</h1>
+      <h1>
+        Greeting:
+        {greeting}
+      </h1>
       <button type="button" onClick={handleClick}>
         Select a greeting
       </button>

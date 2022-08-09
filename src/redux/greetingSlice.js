@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -6,13 +7,11 @@ export const fetchGreeting = createAsyncThunk(
   async () => {
     try {
       const { data } = await axios.get('http://localhost:3000/v1/greetings');
-      console.log(data);
       return data;
     } catch (error) {
-      console.log('EEEEEEEEEEEEEEEEEEEE');
       return error;
     }
-  }
+  },
 );
 
 const initialState = {
@@ -26,7 +25,7 @@ const greetingSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchGreeting.pending, (state, action) => {
+    builder.addCase(fetchGreeting.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchGreeting.fulfilled, (state, action) => {
@@ -34,7 +33,7 @@ const greetingSlice = createSlice({
       state.isLoading = false;
       state.isError = false;
     });
-    builder.addCase(fetchGreeting.rejected, (state, action) => {
+    builder.addCase(fetchGreeting.rejected, (state) => {
       state.isLoading = false;
       state.isError = true;
     });
