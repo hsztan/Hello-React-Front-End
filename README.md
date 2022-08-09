@@ -1,15 +1,26 @@
-# Getting Started with Create React App
+# Greeting Selector Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is the front end for the Greetings Selector APP
 
-## Available Scripts
+- Link to the Back End Greeting App [here](https://github.com/hsztan/Hello-Rails-Back-End)
+  
+## Built With
+
+- React
+- Redux
+- HTML
+- CSS
+- Git
+
+
+## Setup
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -68,3 +79,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Author
+
+👤 **Henry Nawrocki**
+
+- GitHub: [@hsztan](https://github.com/hsztan)
+- Twitter: [@hsztanski](https://twitter.com/hsztanski)
+- LinkedIn: [henry-nawrocki](https://linkedin.com/in/henry-nawrocki)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/hsztan/Hello-React-Front-End/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Thanks to the Rails community for the inspiration and guidance. Thanks to Microverse for the strength and support.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
