@@ -19,6 +19,20 @@ const greetingSlice = createSlice({
   name: 'greeting',
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchGreeting.pending, (state, action) => {
+      state.isLoading = true;
+    });
+    builder.addCase(fetchGreeting.fulfilled, (state, action) => {
+      state.greeting = action.payload;
+      state.isLoading = false;
+      state.isError = false;
+    });
+    builder.addCase(fetchGreeting.rejected, (state, action) => {
+      state.isLoading = false;
+      state.isError = true;
+    });
+  },
 });
 
 export default greetingSlice.reducer;
